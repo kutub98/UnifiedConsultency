@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 
 import React from "react";
-
+import { motion } from "framer-motion";
 const services = [
   {
     name: "Tanzim Sakib",
@@ -54,12 +54,30 @@ const services = [
 ];
 
 const Testimonial = () => {
+  const variant = {
+    hidden: (direction) => ({
+      x: direction === "left" ? "-100%" : "100%",
+      opacity: 0
+    }),
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.9 }
+    }
+  };
   return (
-    <div className="w-full h-full my-20 bg-[#e9f0e9d7] py-6 p-8 border-2">
+    <div className="w-full h-full overflow-hidden my-20 bg-[#e9f0e9d7] py-6 p-8 border-2">
       <div className="w-full h-full text-center bg-[#e9f0e9d7] py-6 px-8 border-2">
-        <h1 className="lg:text-4xl md:text-3xl sm:text-3xl text-2xl PrimaryColor  font-bold text-center">
+        <motion.h1
+          initial="hidden"
+          whileInView="visible"
+          custom={"left"}
+          viewport={{ once: false }}
+          variants={variant}
+          className="lg:text-4xl md:text-3xl sm:text-3xl text-2xl PrimaryColor  font-bold text-center"
+        >
           What clients say
-        </h1>
+        </motion.h1>
       </div>
 
       {/* Carousel */}
