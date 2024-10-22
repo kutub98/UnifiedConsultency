@@ -96,7 +96,7 @@ const NavBar = () => {
         >
           <Image src={logo} height={40} width={180} alt="logo" />
         </Typography>
-        <div className="hidden lg:block">
+        <div className="hidden lg:block w-full">
           <NavList />
         </div>
         <IconButton
