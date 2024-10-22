@@ -9,7 +9,7 @@ import {
   Typography
 } from "@material-tailwind/react";
 import React from "react";
-
+import { motion } from "framer-motion";
 const services = [
   {
     title: "Career Counselling",
@@ -54,23 +54,53 @@ const services = [
 ];
 
 const Services = () => {
+  const variant = {
+    hidden: (direction) => ({
+      x: direction === "left" ? "-100%" : "100%",
+      opacity: 0
+    }),
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.9 }
+    }
+  };
   return (
     <div className="w-full max-w-7xl mx-auto bg-[#e0b64313] py-10">
       {/* textPart */}
       <div className="w-full max-w-5xl mx-auto text-center px-8">
-        <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold text-[#741212] my-2">
+        <motion.h1
+          initial="hidden"
+          whileInView="visible"
+          variants={variant}
+          custom={"right"}
+          viewport={{ once: false }}
+          className="lg:text-5xl md:text-4xl text-3xl font-bold text-[#741212] my-2"
+        >
           Our Services
-        </h1>
-        <h1 className="max-w-3xl mx-auto">
+        </motion.h1>
+        <motion.h1
+          initial="hidden"
+          whileInView={"visible"}
+          variants={variant}
+          custom={"left"}
+          viewport={{ once: false }}
+          className="max-w-3xl mx-auto"
+        >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
           odit voluptatem accusamus quod repudiandae numquam commodi,
-        </h1>
+        </motion.h1>
       </div>
 
       {/* Grid for large screens */}
       <div className="hidden lg:grid md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center px-8 my-14">
         {services.map((item, ind) => (
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={variant}
+            custom="left"
+            viewport={{ once: false }}
             className="text-left hover:bg-[#8a012e] hover:text-white transition-all shadow-md rounded bg-white"
             key={ind}
           >
@@ -90,7 +120,7 @@ const Services = () => {
                 Learn More
               </Button>
             </CardFooter>
-          </div>
+          </motion.div>
         ))}
       </div>
 
