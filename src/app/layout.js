@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "./Components/Shared/NavBar";
 import Footer from "./Components/Shared/Footer.";
+import ScrollProgressBar from "./Components/Shared/ScrollProgressBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +26,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavBar />
+        <div className="sticky  w-full z-[999] top-0">
+          <ScrollProgressBar />
+          <NavBar />
+        </div>
         {children}
         <Footer />
       </body>

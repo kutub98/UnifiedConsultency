@@ -94,7 +94,7 @@ const NavBar = () => {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5"
         >
-          <Image src={logo} height={60} width={200} alt="logo" />
+          <Image src={logo} height={40} width={180} alt="logo" />
         </Typography>
         <div className="hidden lg:block">
           <NavList />
