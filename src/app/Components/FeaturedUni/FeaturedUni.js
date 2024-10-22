@@ -2,19 +2,38 @@ import Image from "next/image";
 import React from "react";
 
 import { Carousel } from "@material-tailwind/react";
-import uni1 from "@/app/Assets/ctg.png";
+
 import uni2 from "@/app/Assets/du.png";
-import uni3 from "@/app/Assets/bg.png";
+
+import { motion } from "framer-motion";
 const FeaturedUni = () => {
+  const variants = {
+    hidden: (direction) => ({
+      x: direction === "left" ? "-100%" : "100%",
+      opacity: 0
+    }),
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.9 }
+    }
+  };
   return (
     <div className="relative  w-full  h-[400px] FeaturedBg my-14">
       {/* <div className=" absolute top-0 left-0 w-full h-full  bg-gradient-to-tr from-transparent via-slate-100 to-[#76000D] ">
         
       </div> */}
       <div className="w-full h-full text-center bg-[#e9f0e9d7] py-10 px-8 border-2">
-        <h1 className="lg:text-4xl md:text-3xl sm:text-3xl text-2xl PrimaryColor my-4 font-bold text-center">
+        <motion.h1
+          initial="hidden"
+          whileInView={"visible"}
+          custom="left"
+          variants={variants}
+          viewport={{ once: false }}
+          className="lg:text-4xl md:text-3xl sm:text-3xl text-2xl PrimaryColor my-4 font-bold text-center"
+        >
           Featured University
-        </h1>
+        </motion.h1>
         <div className="lg:max-w-5xl w-full mx-auto h-auto lg:h-72 my-10">
           <Carousel
             autoplay={true}

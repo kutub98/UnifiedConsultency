@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="sticky  w-full z-[999] top-0">
+        <div className="sticky  w-full z-[999] top-0 Glassmorphism">
           <ScrollProgressBar />
           <NavBar />
         </div>

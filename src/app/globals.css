@@ -45,6 +45,14 @@ body {
   background-image: url("./Assets/world.avif");
 }
 
+.Glassmorphism {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 @media screen and (min-width: 300px) and (max-width: 600px) {
   .countryBg {
     height: 510px;
