@@ -66,7 +66,7 @@ const Services = () => {
     }
   };
   return (
-    <div className="w-full max-w-7xl mx-auto bg-[#e0b64313] py-10">
+    <div className="w-full overflow-hidden max-w-7xl mx-auto bg-[#e0b64313] py-10">
       {/* textPart */}
       <div className="w-full max-w-5xl mx-auto text-center px-8">
         <motion.h1

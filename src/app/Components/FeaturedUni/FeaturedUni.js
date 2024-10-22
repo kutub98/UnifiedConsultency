@@ -19,7 +19,7 @@ const FeaturedUni = () => {
     }
   };
   return (
-    <div className="relative  w-full  h-[400px] FeaturedBg my-14">
+    <div className="relative  overflow-hidden w-full  h-[400px] FeaturedBg my-14">
       {/* <div className=" absolute top-0 left-0 w-full h-full  bg-gradient-to-tr from-transparent via-slate-100 to-[#76000D] ">
         
       </div> */}
