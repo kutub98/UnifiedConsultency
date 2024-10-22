@@ -19,3 +19,44 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.PrimaryBg {
+  background-color: #76000d;
+}
+.PrimaryColor {
+  color: #76000d;
+}
+.-ml-1,
+.h-7,
+.w-7 {
+  display: none;
+}
+
+.countryBg,
+.FeaturedBg {
+  background-image: url("./Assets/fetured.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: center;
+  width: 100%;
+  height: 400px;
+}
+.countryBg {
+  background-image: url("./Assets/world.avif");
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .countryBg {
+    height: 510px;
+  }
+
+  .FeaturedBg {
+    height: 510px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 959px) {
+  .countryBg,
+  .FeaturedBg {
+    height: 710px;
+  }
+}
