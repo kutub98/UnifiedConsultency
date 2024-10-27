@@ -15,7 +15,7 @@ import logo from "@/app/Assets/logo.jpg";
 function NavList() {
   return (
     <ul
-      className={`flex flex-col text-white lg:text-[#76000d] lg:bg-white PrimaryBg font-semibold gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 p-3 rounded  items-center`}
+      className={`flex flex-col text-white w-full lg:text-[#76000d] lg:bg-white PrimaryBg font-semibold gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 p-3 rounded  items-center`}
     >
       <Typography as="li" variant="small" className="p-1 font-medium">
         <a
@@ -86,7 +86,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <Navbar className="mx-auto w-full max-w-7xl px-8 py-1">
+    <Navbar className="mx-auto w-full py-1">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
@@ -96,7 +96,7 @@ const NavBar = () => {
         >
           <Image src={logo} height={40} width={180} alt="logo" />
         </Typography>
-        <div className="hidden lg:block w-full">
+        <div className="hidden lg:block px-0">
           <NavList />
         </div>
         <IconButton
