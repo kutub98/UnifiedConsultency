@@ -102,7 +102,7 @@ const About = () => {
             className="absolute top-0 left-0 w-full h-full bg-black opacity-30 flex justify-center items-center cursor-pointer"
             onClick={handlePlay}
           >
-            <FaPlay className="h-32 w-32 text-white" />
+            <FaPlay className="sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-32 lg:w-32 h-16 w-16 text-white" />
           </div>
         )}
       </motion.div>
