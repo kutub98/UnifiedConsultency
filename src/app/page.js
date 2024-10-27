@@ -8,10 +8,12 @@ import FeaturedUni from "./Components/FeaturedUni/FeaturedUni";
 import HeroSection from "./Components/HeroSection/HeroSection";
 import Services from "./Components/Sevices/Services";
 import Testimonial from "./Components/Testimonial/Testimonial";
+import Video from "./Components/Video/Video";
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <Video />
       <About />
       <div className="bg-black w-full h-full">
         <FeaturedUni />
